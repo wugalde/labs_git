@@ -1,83 +1,165 @@
 # Los comando mas usados en git
+
+## init
+* Crea un nuevo repositorio Git en un directorio vacío o inicializa un repositorio existente.
 ```shell
-
-1. Crea un nuevo repositorio Git en un directorio vacío o inicializa un repositorio existente.
     git init
-    
+```
 
-2. Agrega cambios al área de preparación (staging area) para ser incluidos en el siguiente commit.
+
+## status
+* Muestra el estado actual del repositorio, incluyendo los archivos modificados, agregados o eliminados.
+```shell
+    git status
+```
+
+
+
+
+ ## add   
+* Agrega cambios al área de preparación (staging area) para ser incluidos en el siguiente commit.
+```shell
     git add .
+```    
 
-3. Eliminar los cambios del stage
+
+
+## Reset
+* Eliminar los cambios del stage
+```shell
     git reset .
+``` 
 
-4. Crea un nuevo commit con los cambios agregados al área de preparación, utilizando un mensaje descriptivo.
+
+
+## Commit
+* Crea un nuevo commit con los cambios agregados al área de preparación, utilizando un mensaje descriptivo.
+```shell
     git commit -m "detalle del commit"
     git commit -am "detalle"
+```
 
-5. Deshacer los cambios al ultimo commit.
-    git checkout -- .
-
-6. Muestra un registro de commits realizados en el repositorio
-    git log
-
-7. Corregir el ultimo commit, SCAPE :wq!
+* Corregir el ultimo commit, SCAPE :wq!
+```shell
     git commit --amend
+``` 
 
-8. Crear una rama apartir de la rama donde se encuentra
+
+
+## checkout
+* Crear una rama apartir de la rama donde se encuentra
+```shell
     git checkout -b <nombre-de-la-nueva-rama>
+```
+* Deshacer los cambios al ultimo commit.
+```shell
+    git checkout -- .
+```
+* Cambia a una rama existente.
+```shell
+    git checkout <nombre-de-rama>
+```
 
-9. Muestra la lista de ramas en el repositorio. La rama actual está resaltada.
+
+
+## log
+* Muestra un registro de commits realizados en el repositorio
+```shell
+    git log
+```
+
+
+## branch
+* Eliminar una rama
+```shell
+    git branch -d <rama-a-borrar>
+```
+* Muestra la lista de ramas en el repositorio. La rama actual está resaltada.
+```shell
     git branch
     git branch -a
+```
+* Renombrar un branch
+```shell
+    git branch -M main
+```
 
-10. Cambia a una rama existente.
-    git checkout <nombre-de-rama>
 
-11.  Fusiona una rama específica en la rama actual.
+## merge
+* Fusiona una rama específica en la rama actual.
+```shell
     git merge <nombre-de-rama>
+```
 
-12. Eliminar una rama
-    git branch -d <rama-a-borrar>
 
-13. Enviarlo al repo
+
+## push
+* Enviarlo al repo
+```shell
     git push
+```
+* Envía los commits locales al repositorio remoto.
+```shell
+    git push -u origin main
+```
+* Verifica que se haya creado la etiqueta correctamente ejecutando el comando git tag. Ahora, para enviar la etiqueta al repositorio remoto, utiliza el siguiente comando:
+*   Esto enviará la etiqueta específica que creaste al repositorio remoto llamado "origin".
+```shell
+    git push origin <tag_name>
+```
 
-14. Asocia un repositorio remoto con tu repositorio local.
+
+## remote
+* Asocia un repositorio remoto con tu repositorio local.
+```shell
     git remote add origin <URL>
     git remote -v
-
-15. Renombrar un branch
-    git branch -M main
-
-15. Envía los commits locales al repositorio remoto.
-    git push -u origin main
-
-16. Clona un repositorio remoto y crea una copia local en tu máquina.
-    git clone <URL>   
-
-17.  Muestra el estado actual del repositorio, incluyendo los archivos modificados, agregados o eliminados.
-    git status
-
-18.  Obtiene los últimos cambios del repositorio remoto y los fusiona con tu rama local.
-    git pull
- 
- 19. Muestra las diferencias entre el estado actual y el último commit.
-    git diff
-
-20.  Guarda temporalmente los cambios no comprometidos en una pila de cambios (stash) para que puedas cambiar de rama sin perder tu trabajo
-    git stash
-
-21. Crea la etiqueta utilizando el siguiente comando, reemplazando <tag_name> con el nombre que desees darle a la etiqueta:
-    git tag <tag_name>
-
-22. También puedes agregar un mensaje descriptivo utilizando la opción -a y la opción -m:
-    git tag -a <tag_name> -m "Mensaje descriptivo de la etiqueta"
-
-23. Verifica que se haya creado la etiqueta correctamente ejecutando el comando git tag. Ahora, para enviar la etiqueta al repositorio remoto, utiliza el siguiente comando:
-    git push origin <tag_name>
-    Esto enviará la etiqueta específica que creaste al repositorio remoto llamado "origin".
-
-24. Verifica que la etiqueta se haya enviado correctamente ejecutando el comando 
-    git ls-remote --tags.
 ```
+* Verifica que la etiqueta se haya enviado correctamente ejecutando el comando 
+```shell
+    git ls-remote --tags.
+ ```   
+
+
+## clone
+* Clona un repositorio remoto y crea una copia local en tu máquina.
+```shell
+    git clone <URL>   
+```
+
+
+## pull 
+* Obtiene los últimos cambios del repositorio remoto y los fusiona con tu rama local.
+```shell
+    git pull
+ ```
+ 
+ ## diff
+ * Muestra las diferencias entre el estado actual y el último commit.
+```shell
+    git diff
+```
+
+## stash
+* Guarda temporalmente los cambios no comprometidos en una pila de cambios (stash) para que puedas cambiar de rama sin perder tu trabajo
+```shell
+    git stash
+```
+
+
+## tag 
+* Crea la etiqueta utilizando el siguiente comando, reemplazando <tag_name> con el nombre que desees darle a la etiqueta:
+```shell
+    git tag <tag_name>
+```
+
+* También puedes agregar un mensaje descriptivo utilizando la opción -a y la opción -m:
+```shell
+    git tag -a <tag_name> -m "Mensaje descriptivo de la etiqueta"
+```
+
+
+
+  
+
+
